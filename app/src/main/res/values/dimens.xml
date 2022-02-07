@@ -1,0 +1,19 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="screen_default_margin">16dp</dimen>
+
+    <dimen name="margin_side_XL">45dp</dimen>
+    <dimen name="margin_side_L">35dp</dimen>
+    <dimen name="margin_side_M">25dp</dimen>
+    <dimen name="margin_side_S">15dp</dimen>
+    <dimen name="margin_side_XS">10dp</dimen>
+    <dimen name="margin_side_XXS">5dp</dimen>
+
+    <dimen name="text_size_XL">20sp</dimen>
+    <dimen name="text_size_L">18sp</dimen>
+    <dimen name="text_size_M">16sp</dimen>
+    <dimen name="text_size_S">14sp</dimen>
+    <dimen name="text_size_XS">12sp</dimen>
+    <dimen name="text_size_XXS">10sp</dimen>
+
+</resources>

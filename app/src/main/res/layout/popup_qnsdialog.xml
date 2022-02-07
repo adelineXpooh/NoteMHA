@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dialog_title"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_M"
+        android:layout_marginStart="@dimen/margin_side_S"
+        android:layout_marginEnd="@dimen/margin_side_S"
+        android:layout_marginTop="@dimen/margin_side_S"
+        android:layout_marginBottom="@dimen/margin_side_XXS"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dialog_msg"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_S"
+        android:layout_marginStart="@dimen/margin_side_S"
+        android:layout_marginEnd="@dimen/margin_side_S"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_side_S">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_no"
+            android:text="@string/no"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/margin_side_XXS"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDone"
+            android:text="@string/confirm"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/margin_side_XXS"/>
+
+    </LinearLayout>
+
+</LinearLayout>

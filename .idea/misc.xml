@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidProjects/NoteMHA/app/src/main/res/drawable/ic_baseline_stop_24.xml" value="0.1505" />
+        <entry key="..\:/AndroidProjects/NoteMHA/app/src/main/res/drawable/ic_list.xml" value="0.1475" />
+        <entry key="..\:/AndroidProjects/NoteMHA/app/src/main/res/drawable/ic_pause.xml" value="0.1505" />
+        <entry key="..\:/AndroidProjects/NoteMHA/app/src/main/res/drawable/ic_play.xml" value="0.1475" />
+        <entry key="..\:/AndroidProjects/NoteMHA/app/src/main/res/drawable/ic_record.xml" value="0.1475" />
+        <entry key="..\:/AndroidProjects/NoteMHA/app/src/main/res/drawable/oval_primary.xml" value="0.1505" />
+        <entry key="..\:/AndroidProjects/NoteMHA/app/src/main/res/drawable/selector_play.xml" value="0.1505" />
+        <entry key="..\:/AndroidProjects/NoteMHA/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidProjects/NoteMHA/app/src/main/res/layout/activity_onboard.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidProjects/NoteMHA/app/src/main/res/layout/fragment_list.xml" value="0.20208333333333334" />
+        <entry key="..\:/AndroidProjects/NoteMHA/app/src/main/res/layout/fragment_record.xml" value="0.20208333333333334" />
+        <entry key="..\:/AndroidProjects/NoteMHA/app/src/main/res/layout/fragment_record_details.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidProjects/NoteMHA/app/src/main/res/layout/item_recording.xml" value="0.14010416666666667" />
+        <entry key="..\:/AndroidProjects/NoteMHA/app/src/main/res/layout/layout_container.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidProjects/NoteMHA/app/src/main/res/layout/layout_tab.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidProjects/NoteMHA/app/src/main/res/layout/popup_msgdialog.xml" value="0.16927083333333334" />
+        <entry key="..\:/AndroidProjects/NoteMHA/app/src/main/res/layout/popup_progress.xml" value="0.16927083333333334" />
+        <entry key="..\:/AndroidProjects/NoteMHA/app/src/main/res/layout/popup_qnsdialog.xml" value="0.16927083333333334" />
+        <entry key="..\:/AndroidProjects/NoteMHA/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
