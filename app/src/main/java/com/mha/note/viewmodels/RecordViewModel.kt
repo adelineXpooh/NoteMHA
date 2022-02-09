@@ -16,11 +16,11 @@ class RecordViewModel(application: Application) : AndroidViewModel(application) 
 
     private val dbHelper: DatabaseHelper = DatabaseHelper.getInstance(application.applicationContext)
 
-    //private val recordingListLiveData = MutableLiveData<ArrayList<Recording>>()
+    private val recordingList = MutableLiveData<ArrayList<Recording>>()
 
-    /*fun getRecordingListLiveData(): MutableLiveData<ArrayList<Recording>>{
-        return recordingListLiveData
-    }*/
+    fun getRecordingList(): LiveData<ArrayList<Recording>>{
+        return recordingList
+    }
 
     fun addRecording(newRecording: Recording): Long{
         return dbHelper.addRecording(newRecording)
@@ -30,9 +30,8 @@ class RecordViewModel(application: Application) : AndroidViewModel(application) 
         return dbHelper.getRecording(id)
     }
 
-    fun getAllRecordings(): ArrayList<Recording>{
-        //recordingListLiveData.postValue(dbHelper.getAllRecordings())
-        return dbHelper.getAllRecordings()
+    fun getAllRecordingsFromDB(){
+        recordingList.value = dbHelper.getAllRecordings()
     }
 
     fun getRecordingsCount(): Int{

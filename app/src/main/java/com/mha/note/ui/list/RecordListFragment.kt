@@ -5,9 +5,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.pm.PackageManager
 import android.media.MediaPlayer
-import android.os.Build
 import android.os.Bundle
-import android.os.Environment
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -25,7 +23,6 @@ import com.mha.note.R
 import com.mha.note.activities.MainActivity
 import com.mha.note.constants.FragmentTags
 import com.mha.note.constants.TagName
-import com.mha.note.database.DatabaseHelper
 import com.mha.note.databinding.FragmentListBinding
 import com.mha.note.interfaces.StringDelegate
 import com.mha.note.objects.Recording
@@ -81,6 +78,9 @@ class RecordListFragment : Fragment() {
             requestMultiplePermissions.launch(permissions)
         }
 
+        init()
+        observeViewModel()
+
         return root
     }
 
@@ -93,8 +93,7 @@ class RecordListFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         if (isMenuVisible){
-            getRecordingsListFromDatabase()
-            init()
+            recordViewModel.getAllRecordingsFromDB()
         }
     }
 
@@ -135,14 +134,18 @@ class RecordListFragment : Fragment() {
         mAdapter.notifyDataSetChanged()
     }
 
-    private fun getRecordingsListFromDatabase(){
-        mRecordingList = recordViewModel.getAllRecordings()
-        if (mRecordingList.size > 0) {
-            // Check Recording List in SQLite
-            /*for (i in mRecordingList.indices){
-                Log.e("Recording", mRecordingList[i].toString())
-            }*/
-            getFilesListFromStorage()
+    private fun observeViewModel(){
+        Log.e("CHECK", "Entered Observe View Model")
+        recordViewModel.getRecordingList().observe(viewLifecycleOwner){ recordings ->
+            mRecordingList.clear()
+            mRecordingList.addAll(recordings)
+            if (mRecordingList.size > 0) {
+                // Check Recording List in SQLite
+                /*for (i in mRecordingList.indices){
+                    Log.e("Recording", mRecordingList[i].toString())
+                }*/
+                getFilesListFromStorage()
+            }
         }
     }
 
@@ -179,6 +182,8 @@ class RecordListFragment : Fragment() {
                 }
             }while(!found && j < files.size)
         }
+
+        mAdapter.notifyDataSetChanged()
     }
 
     private fun playRecording(idx: Int){
